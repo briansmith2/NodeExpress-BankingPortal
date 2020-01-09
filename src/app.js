@@ -5,10 +5,7 @@ const express = require('express');
 
 const app = express();
 
-const port = 3000;
-
 var router = express.Router();
-
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -18,4 +15,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 /* GET home page. */
 router.get('/', (req, res) => res.render('index', { title: 'Index' }));
 
-app.listen(port, () => console.log(`PS Project Running on port 3000!`));
+app.listen(3000, () => console.log(`PS Project Running on port 3000!`));
